@@ -1,0 +1,57 @@
+.car{
+    height: auto;
+    width: 100px;
+    z-index:2;
+}
+#logo{
+    height: auto;
+    width: 200px;
+}
+.text-shadow{
+    text-shadow: 4px 2px 2px rgba(0,0,0,0.5);
+}
+/* Animaciones */
+#car1{
+    animation: animation-linear 5s infinite;
+    animation-timing-function: linear;
+}
+@keyframes animation-linear{
+    from {left:0%;}
+    to {left:100%;}
+}
+#car2{
+    animation:animation-ease-in-out 5s infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animation-ease-in-out{
+    from {left:0%;}
+    to{left:100%;}
+}
+#car3{
+    animation:animation-steps 5s infinite;
+    animation-timing-function: steps(20,end);
+}
+@keyframes animation-steps{
+    from {left:0%;}
+    to{left:100%;}
+}
+#car4{
+    animation:animation-cubic-bezier 5s infinite;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.58, 0);
+}
+@keyframes animation-cubic-bezier {
+    from {left:0%;}
+    to{left:100%;}
+}
+
+/* ajustes para pantallas pequeñas */
+@media (max-width:768px){
+    .car{
+        height: auto;
+        width: 60px;
+    }
+    #logo{
+        height: auto;
+        width: 50%;
+    }
+}
